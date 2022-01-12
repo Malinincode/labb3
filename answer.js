@@ -217,9 +217,9 @@ dbwebb.assert("1.7", ANSWER, true);
  function arrayAverage(inputArray) {
     let average = 0;
 
-    for (let i = 0; i < array1.length; i++) {
+    for (let i = 0; i < inputArray.length; i++) {
         average += inputArray[i];
-    
+    }
 
 return Math.round(average / inputArray.length);
  }
