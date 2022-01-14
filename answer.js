@@ -252,12 +252,21 @@ dbwebb.assert("1.8", ANSWER, false);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
+ let myArray = array1.slice();
 
+ function switchFirstLast(myArray) {
 
+    let a = myArray.pop();
+    console.log(a)
+    let b = myArray.shift();
+       console.log(b);
+    myArray.push(b)
+    myArray.unshift(a)
+return myArray;
+ }
 
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+ 
+ANSWER = switchFirstLast(myArray);
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("2.1", ANSWER, false);
@@ -273,15 +282,13 @@ dbwebb.assert("2.1", ANSWER, false);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
+ myArray.splice(2, 2, false, false)
 
 
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = myArray;
 
 // I will now test your answer - change false to true to get a hint.
-dbwebb.assert("2.2", ANSWER, false);
+dbwebb.assert("2.2", ANSWER, true);
 
 /**
  * Exercise 2.3 (1 points)
@@ -292,15 +299,16 @@ dbwebb.assert("2.2", ANSWER, false);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
+ 
+
+ myArray.splice(3, 2, "MEGA");
 
 
+ANSWER =  myArray;
 
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
 
 // I will now test your answer - change false to true to get a hint.
-dbwebb.assert("2.3", ANSWER, false);
+dbwebb.assert("2.3", ANSWER, true);
 
 /** ----------------------------------------------------------------------
  * Section 3 .  Arrays with loops
@@ -325,11 +333,17 @@ dbwebb.assert("2.3", ANSWER, false);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
- 
+ let myString2 = "";
+ let myArray2 = ["JavaScript", "JavaScript", "JavaScript", "JavaScript", "JavaScript"];
+
+ for (let i=0; i < myArray2.length; i++) {
+
+    myString2 += myArray2[i];
+ }
 
 
 
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = myString2;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("3.1", ANSWER, false);
@@ -351,15 +365,31 @@ dbwebb.assert("3.1", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+let myList = [1, 3, 5, 7, 9]
+let search = 5;
+let answer = "";
+
+for (let i = 0; i < 5; i++) {
+      if (search == myList.length); 
+      text = "The number is in the array";
+console.log(answer)
+
+}
 
 
+/* if (hour < 18) {
+    greeting = "Good day";
+  } else {
+    greeting = "Good evening";
+  }
+ */
 
 
  
 ANSWER = "Replace this text with the variable holding the answer.";
 
 // I will now test your answer - change false to true to get a hint.
-dbwebb.assert("3.2", ANSWER, false);
+dbwebb.assert("3.2", ANSWER, true);
 
 
 console.log(dbwebb.exitWithSummary());
