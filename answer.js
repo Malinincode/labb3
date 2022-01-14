@@ -370,23 +370,20 @@ let search = 5;
 let answer = "";
 
 for (let i = 0; i < 5; i++) {
-      if (search == myList.length); 
-      text = "The number is in the array";
-console.log(answer)
 
+      if (search == myList.length){
+      answer = "The number is in the array";
+      break;
+    
+    } else {
+        answer = "The number is not in the array";
+
+
+    } 
 }
 
-
-/* if (hour < 18) {
-    greeting = "Good day";
-  } else {
-    greeting = "Good evening";
-  }
- */
-
-
  
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = answer;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("3.2", ANSWER, true);
